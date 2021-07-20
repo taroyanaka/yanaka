@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slang</title>
+</head>
+<body>
+    <ul class="parent"></ul>
+    <script>
+document.querySelector("ul.parent").innerHTML = ["slang-replacesql.html",
+"slang-withbettersqlite3.html",
+"slang-schematablecolumn.html",
+"slang-withexpressjs.html",
+"slang-testalasql.html"].map(V=>`<li><a href="https://taroyanaka.github.io/javascript/HTML/sql/${V}">https://taroyanaka.github.io/javascript/HTML/sql/${V}</a></li>`).join("");
+    </script>
+</body>
+</html>
