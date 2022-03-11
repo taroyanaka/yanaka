@@ -162,28 +162,5 @@ href="https://taroyanaka.github.io/javascript/HTML/fill-in-the-blank-multiple-ch
 <div><a href="https://yanaka.dev/slang.html">slang</a><a onclick="exe(event);"> +</a></div>
 <div><a href="https://gist.github.com/taroyanaka">gist</a></div>
 <div><a href="https://script.google.com/macros/s/AKfycbzqjGyjwy9xeYV5VnH8SBp6EoAeyGJ2ZsE73gXEEQ9Sc6qYqro/exec">yanaka code dump</a></div><!-- https://gist.github.com/taroyanaka/bb8d7767405a37ce5f624623f7fac68c -->
-
-<textarea name="urlToTitleFrom" class="urlToTitleFrom" cols="30" rows="10" oninput="urlToTitle()" placeholder="https://taroyanaka.github.io/any/url.html"></textarea>
-<textarea name="urlToTitleTo" class="urlToTitleTo" cols="30" rows="10"></textarea>
-<script>
-const splitByLine = () => document.querySelector(`.urlToTitleFrom`).value.split("\n");
-const urlToTitle = () => {
-    document.querySelector(`.urlToTitleTo`).value =
-        splitByLine().map(LINE => {
-            const URL = LINE;
-            const title = LINE.split("/").slice(-1)[0].split(".")[0];
-            return `<div><a href="${URL}">${title}</a><a onclick="exe(event);"> +</a></div>`;
-        }).join("\n");
-};
-const urlToTitleTest = () => {
-    document.querySelector(`.urlToTitleFrom`).value = `https://taroyanaka.github.io/javascript/etc/quiz.html
-https://taroyanaka.github.io/javascript/HTML/vent.html`;
-    urlToTitle();
-    if (document.querySelector(`.urlToTitleTo`).value === `<div><a href="https://taroyanaka.github.io/javascript/etc/quiz.html">quiz</a><a onclick="exe(event);"> +</a></div>
-<div><a href="https://taroyanaka.github.io/javascript/HTML/vent.html">vent</a><a onclick="exe(event);"> +</a></div>`) { console.log("OK") } else { console.log("NG") }
-};
-</script>
-
-
 </body>
 </html>
